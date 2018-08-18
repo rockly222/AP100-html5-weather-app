@@ -9,7 +9,7 @@ var app = app || {};
 * MODELS
 **/
 app.Message = Backbone.Model.extend({  
-  url: 'http://api.openweathermap.org/data/2.5/weather?q=Suzhou&APPID=2ad35f7a10175d9993ae062ed7b0d6ae',
+  url: 'http://api.openweathermap.org/data/2.5/weather?q=Suzhou',
   defaults: {
     main: {
         temp: -1,
@@ -132,9 +132,9 @@ app.MessageView = Backbone.View.extend({
 * BOOTUP
 **/
 $(document).ready(function() {
-	app.messageView = new app.MessageView();
-    //app.postView = new app.PostView();
-    //app.actionView = new app.ActionView();
+	//app.messageView = new app.MessageView();
+    app.postView = new app.PostView();
+    app.actionView = new app.ActionView();
 });
 
 }) ();
